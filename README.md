@@ -12,7 +12,7 @@ Code release and supplementary materials for:</br>
 
 
 ## An example of robustness flaws in LLM-based NLP software
-Slightly perturbed text (green) can mislead ChatGPT o1-preview into judging the label of financial news from "POSITIVE" (with a confidence of 95\%) to "NEGATIVE" (with a confidence of 70\%).
+Slightly perturbed text can mislead ChatGPT o1-preview into judging the label of financial news from "POSITIVE" (with a confidence of 95\%) to "NEGATIVE" (with a confidence of 70\%).
 ![image](https://github.com/lumos-xiao/ABFS/blob/main/images/gpt_test_case.png)
 
 ## Datesets
@@ -31,7 +31,7 @@ There are three datasets used in our experiments:
 
 The most important files in this project are as follows:
 - `goal_functions/classification/untargeted_llm_classification.py`: quantify the goal of testing LLM-based NLP software in text classification task
-- `search_methods/beam_word_swap_wir.py`: search test cases based on adaptive beam search
+- `search_methods/best_first_word_swap_wir.py`: search test cases based on adaptive best-first search
 - `inference.py`: drive threat LLMs to do inference and process outputs
 - `abfs_fi_llama270b.py`: an example of testing Llama-2-70b-chat on the Financial Phrasebank dataset via ABFS
 
